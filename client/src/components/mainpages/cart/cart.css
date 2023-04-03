@@ -1,32 +1,54 @@
+.wrapperCarts {
+  padding: 10px 10%;
+}
 .cart {
-    position: relative;
-    border: 1px solid #ccc;
-    transform: scaleY(0.98);
+  position: relative;
+  box-shadow: 0 0 10px 1px lightgray;
+  transform: scaleY(0.98);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.cart img {
+  border-radius: 20px;
+}
+.cart .descriptionCart {
+  color: rgb(67, 67, 67);
+}
+.cart .contentCart {
+  color: rgb(0, 0, 0);
+}
+.amount {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 .amount span {
-    color: crimson;
-    padding: 0 20px;
+  color: crimson;
+  padding: 0 20px;
 }
 .amount button {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #777;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: lightgrey;
+  font-size: 20px;
+  font-weight: bold;
 }
 .delete {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    color: crimson;
-    font-weight: 900;
-    cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: crimson;
+  font-weight: 900;
+  cursor: pointer;
 }
 .total {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .total h3 {
-    color: crimson;
+  color: crimson;
 }

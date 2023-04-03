@@ -1,0 +1,47 @@
+.privacyPolicyContainer {
+  background: var(--color-black);
+}
+.wrappImagesInfo {
+  width: 50%;
+  height: 400px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.dowload {
+  color: var(--color-gray);
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  padding: 5px 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.dowload img {
+  object-fit: cover;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+#childSwiperInfo {
+  height: 95%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+#childSwiperInfo img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.privacyPolicyContainer h1 {
+  text-align: center;
+  color: var(--color-blue-admin);
+  margin-bottom: 10px;
+  padding-top: 60px;
+}
+.privacyPolicyContainer h1:first-of-type {
+  padding-top: 10px;
+}

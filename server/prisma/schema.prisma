@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DB_LINK")
+}
+generator client {
+  provider = "prisma-client-js"
+}
+
+model userSchema {
+    id          Int         @id @default(sequence())
+    email       String      @unique
+    password    String
+    name        String
+    role        Int         @default(0)
+    //cart      Array
+    createdAt   DateTime    @default(now())
+}
+model categorySchema {
+    id          Int         @id @default(sequence())
+    name        String      @unique
+    createdAt   DateTime    @default(now())
+}
+model productSchema {
+    id          Int         @id @default(sequence())
+    product_id  Int         
+    title       String
+    price       Int
+    description String
+    content     String
+    images      productImage[]
+    category    String
+    checked     Boolean     @default(false)
+    sold        Int         @default(0)
+    createdAt   DateTime    @default(now())
+}
+model productImage {
+  id          Int         @id @default(sequence())
+  public_id   String
+  url         String
+  product     productSchema      @relation(fields: [prodId], references: [id], onDelete: Cascade)
+  prodId   Int         
+
+}
